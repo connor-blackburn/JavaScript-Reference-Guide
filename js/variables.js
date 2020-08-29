@@ -26,5 +26,29 @@ console.log(lastName); // Result = Blackburn
 console.log(age); // Result = 21
 console.log(male); // Result = true
 
+// JavaScript data types
+var string = 'A string is text';
+var emptyString = '';
+var numberInteger = 42;
+var numberFloat = 42.50;
+var boolenTrue = true;
+var booleanFalse = false;
+var undefined;
+var isNull = null;
+
+var object = {
+    firstName: 'Connor',
+    lastName: 'Blackburn',
+    age: 21,
+    male: true,
+    address: {
+        line1: 'Lorem Ipsum',
+        city: 'Lorem',
+    },
+};
 
 
+// Finding the data type of a variable with typeof
+console.log(typeof(firstName)); // Result = string
+console.log(typeof(age)); // Result = number
+console.log(typeof(object)); // Result = object
