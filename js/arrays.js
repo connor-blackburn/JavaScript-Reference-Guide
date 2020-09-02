@@ -73,3 +73,16 @@ console.log(languages.splice(2, 0, 'Typescript')); // Inserts typescript at 2, a
 console.log(languages); // Results - (6) ["JavaScript", "Python", "Typescript", "Java", "C#", "C++"]
 console.log(languages.splice(2, 1)); // Will remove 1 element at index position 2.
 
+// Looping through arrays
+// for loop
+// Initialisation, conditional, incrementation
+for(var i = 0; i < languages.length; i++) {
+    console.log(i, languages[i]);
+}
+/*
+0 "JavaScript"
+1 "Python"
+2 "Java"
+3 "C#"
+4 "C++"
+*/
