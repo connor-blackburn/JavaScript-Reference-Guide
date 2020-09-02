@@ -46,3 +46,30 @@ console.log(names);
 // An easier alternative without built in function to replace an array element.
 names[2] = 'John';
 console.log(names);
+
+// Array Manipulation
+var classA = [27, 62, 98, 9];
+var classB = [12, 98, 54, 32];
+var classC = [67, 89, 37, 87];
+
+// Arrays have a built in concat function which will form a new array using 2 or more arrays
+console.log(classA.concat(classB)); // Result - (8) [27, 62, 98, 9, 12, 98, 54, 32]
+
+var allResults = classA.concat(classB, classC); // Results - (12) [27, 62, 98, 9, 12, 98, 54, 32, 67, 89, 37, 87]
+
+// Slice
+var languages = [
+    'JavaScript',
+    'Python',
+    'Java',
+    'C#',
+    'C++',
+];
+console.log(languages.slice(0, 2)); // Slices an array from 0 to an end point 2. Slice does not include the ending element. This forms a new array. Result - (2) ["JavaScript", "Python"]
+console.log(languages.slice(2)); // Slices an array at 2 until the end of the array. Result - ["Java", "C#", "C++"]
+
+// Inserting an element in the middle of an array with splice
+console.log(languages.splice(2, 0, 'Typescript')); // Inserts typescript at 2, and the 0 represents elements to replace.
+console.log(languages); // Results - (6) ["JavaScript", "Python", "Typescript", "Java", "C#", "C++"]
+console.log(languages.splice(2, 1)); // Will remove 1 element at index position 2.
+
