@@ -15,3 +15,17 @@ names.forEach(function (currentItem, i) {
 names.reverse().forEach(function (currentItem, i) {
     console.log(i, currentItem);
 });
+
+// Using Map function to transform the data in one array to create another.
+var nums = [10, 15, 12, 67, 90, 100];
+function x10 (num) {
+    return num * 10;
+}
+var numsx10 = nums.map(x10); // Results - (6) [100, 150, 120, 670, 900, 1000].
+// Map always remains the same order as original array and keeps the original unaffected
+
+function calculatePercentage(scores, highestPossible,) {
+    return scores.map(function(scores) {
+        return (100 / highestPossible) * scores;
+    });
+}
