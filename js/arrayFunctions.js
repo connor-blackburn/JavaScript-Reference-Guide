@@ -29,3 +29,11 @@ function calculatePercentage(scores, highestPossible,) {
         return (100 / highestPossible) * scores;
     });
 }
+
+// Using the reduce function to take an array and reduce it to a single value.
+var nums2 = [10, 15, 12, 67, 90, 100];
+// Reduce takes all the numbers from the above array, and iterates through it, keeping a running total so you are left with the result of adding all the numbers together - 294
+var reduced = nums2.reduce(function(runningTotal, currentValue) {
+    return runningTotal + currentValue;
+}, 0
+);
