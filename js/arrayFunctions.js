@@ -37,3 +37,16 @@ var reduced = nums2.reduce(function(runningTotal, currentValue) {
     return runningTotal + currentValue;
 }, 0
 );
+
+// Filter takes an array and filters the results based on specific rules. A new array is created and the original if left untouched
+var nums3 = [10, 15, 12, 67, 90, 100];
+function isEven(num) {
+    return (num % 2 === 0);
+}
+function isOdd(num) {
+    return (num % 2 !== 0);
+}
+console.log(nums3.filter(isEven)); // (4) [10, 12, 90, 100]
+console.log(nums3.filter(isOdd)); // (2) [15, 67]
+
+
