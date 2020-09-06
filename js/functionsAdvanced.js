@@ -57,3 +57,45 @@ var standardItemsWithTax =
 
 var reduceedItemsWithTax = 
     reducedTaxItems.map(withSalesTax(1.12)); //(3) [11.2, 97.44, 14.55]
+
+// Arrow functions / fat arrow functions, they allow us to write shorter function expressions.
+// Added in ES6 version of js, may not work in all browsers
+// Example we have seen many times before
+var numbers = [
+    10,
+    20,
+    30,
+];
+numbers.reduce(function(total, current) {
+    return total + current;
+}, 0);
+
+// Lets convert this into an arrow function. No function keyword, args in () then the arrow then function body
+// If the function does not return a console log but only returns a return value, arrow functions allow us to use this syntax
+// The function returns the expression after the arrow
+// If the function required several lines in the body of the function, you would need to bring back the {} brackets
+numbers.reduce((total, current) => total + current, 0);
+
+// If the arrow function only requires one argument, you can remove the () around the argument.
+var multiply = numbers.map(x => x * 10);
+console.log(multiply); // (3) [100, 200, 300]
+
+// Because arrow functions are expressions, you can call and name them by assigning them to variables
+var multiplyx5 = x => x * 5;
+console.log(multiplyx5(4)); // 20
+
+// More than 1 argument 
+var addition = (x, y) => x + y;
+console.log(addition(10, 23)); // 33
+
+// If multiple arguments and more lines of code as the function returns more than a single expression
+// {} must be added again
+var moreThan = (x, y) => {
+    if (x > y) {
+        console.log('X is more than Y');
+    } else {
+        console.log('X is not bigger than Y');
+    }
+}
+
+// The best practice is to use an arrow function when you require an inline, or one line function returning a value.
