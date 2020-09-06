@@ -97,5 +97,18 @@ var moreThan = (x, y) => {
         console.log('X is not bigger than Y');
     }
 }
-
 // The best practice is to use an arrow function when you require an inline, or one line function returning a value.
+
+// Function arguments. Functions do not have to take a set number of arguments and can a varible number of arguments in JavaScript
+// What we have seen before, set to 2 arguments and will only add two numbers. What if we wnated to add more numbers together?
+function add (a, b) {
+    return a + b;
+}
+function addv2 () {
+    total = 0;
+    for (i = 0; i < arguments.length; i++) {
+        total = total + arguments[i];
+    }
+    return total;
+}
+console.log(addv2(2, 8, 10, 20, 5, 5, 10)); // This logs the arguments to the addv2 function. Result - 60
