@@ -19,3 +19,13 @@ var name = 'Connor';
 // Within a function js will always check local variables first before checking the parent, global scope
 // Not using the var keyword within a function will override a variable within the global scope and reassign a value, and create a new one if it does not exist
 
+
+// A closure occures when higher order functions combine with the rules regarding scope.
+// This function is also known as a closure
+function withSalesTax(taxRate) {
+    return function(price){
+        return Number((price * taxRate).toFixed(2));
+    }
+ }
+ var withLowTax = withSalesTax(1.1);
+ var withHighTax = withSalesTax(1.2);
